@@ -762,6 +762,8 @@ BoxCollider2D:
   m_EdgeRadius: 0
 --- !u!1 &1891708441
 --- !u!1 &1764196341
+--- !u!1 &1764196341
+--- !u!1 &1891708441
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -777,6 +779,10 @@ GameObject:
   - component: {fileID: 1764196342}
   m_Layer: 0
   m_Name: Square (1)
+  - component: {fileID: 1891708443}
+  - component: {fileID: 1891708442}
+  m_Layer: 0
+  m_Name: Capsule (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -784,6 +790,8 @@ GameObject:
   m_IsActive: 1
 --- !u!212 &1891708442
 --- !u!212 &1764196342
+--- !u!212 &1764196342
+--- !u!212 &1891708442
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -791,6 +799,8 @@ SpriteRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1891708441}
   m_GameObject: {fileID: 1764196341}
+  m_GameObject: {fileID: 1764196341}
+  m_GameObject: {fileID: 1891708441}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -827,12 +837,16 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 2}
   m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -840,6 +854,8 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!4 &1891708443
 --- !u!4 &1764196343
+--- !u!4 &1764196343
+--- !u!4 &1891708443
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -855,6 +871,11 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.02, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 3.5625, z: 1}
+  m_GameObject: {fileID: 1891708441}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.95, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -870,3 +891,6 @@ SceneRoots:
   - {fileID: 1891708443}
   - {fileID: 433425375}
   - {fileID: 1764196343}
+  - {fileID: 433425375}
+  - {fileID: 1764196343}
+  - {fileID: 1891708443}

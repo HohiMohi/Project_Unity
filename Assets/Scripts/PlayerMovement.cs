@@ -4,36 +4,27 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 5.0f;
-    public float jumpForce = 2.0f;
-    private bool isJumping = false;
+    public float moveSpeed = 5f;
+    public float sprintSpeed = 10f;
+
     private Rigidbody2D rb;
 
+    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
+    // Update is called once per frame
     void Update()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveX = Input.GetAxis("Horizontal");
+        float moveY = Input.GetAxis("Vertical");
 
-        Vector2 movement = new Vector2(moveHorizontal, 0.0f);
+        bool isSprinting = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
+        float speed = isSprinting ? sprintSpeed : moveSpeed;
 
-        rb.AddForce(movement * speed);
-
-        if (Input.GetButtonDown("Jump") && !isJumping)
-        {
-            rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-            isJumping = true;
-        }
-    }
-
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isJumping = false;
-        }
+        Vector2 move = new Vector2(moveX, moveY);
+        rb.velocity = move * speed;
     }
 }

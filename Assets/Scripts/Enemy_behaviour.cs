@@ -70,8 +70,10 @@ public class Enemy_behaviour : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D trig)
     {
+        
         if (trig.gameObject.tag == "Player")
         {
+            Debug.Log("Player detected");
             target = trig.transform;
             inRange = true;
             Flip(); 

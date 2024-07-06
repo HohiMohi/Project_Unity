@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - ground
   - Enemy
+  - Bar
   layers:
   - Default
   - TransparentFX

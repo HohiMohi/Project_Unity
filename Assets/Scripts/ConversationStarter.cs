@@ -1,11 +1,4 @@
-// Pseudocode:
-// 1. Define a private boolean field to track if the player is in the trigger zone.
-// 2. In the Update method, check if the player is in the trigger zone and if the F key is pressed.
-//    If both conditions are true, log "F key pressed" and start the conversation.
-// 3. In the OnTriggerEnter2D method, check if the colliding object has the "Player" tag.
-//    If it does, log "Player entered trigger zone" and set the playerInTriggerZone flag to true.
-// 4. In the OnTriggerExit2D method, check if the exiting object has the "Player" tag.
-//    If it does, log "Player exited trigger zone" and set the playerInTriggerZone flag to false.
+
 
 using System.Collections;
 using System.Collections.Generic;

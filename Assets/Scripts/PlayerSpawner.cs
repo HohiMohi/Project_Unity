@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[System.Serializable] // Make SpawnPoint visible in the inspector
+[System.Serializable] 
 public class SpawnPoint
 {
     public int ID;
@@ -14,7 +14,7 @@ public class PlayerSpawner : MonoBehaviour
 
     void Start()
     {
-        int spawnPointID = PlayerPrefs.GetInt("SpawnPointID", 0); // Default to 0 if not set
+        int spawnPointID = PlayerPrefs.GetInt("SpawnPointID", 0); 
         SpawnPlayer(spawnPointID);
     }
 
@@ -25,7 +25,7 @@ public class PlayerSpawner : MonoBehaviour
             if (spawnPoint.ID == spawnPointID)
             {
                 Instantiate(playerPrefab, spawnPoint.location.position, Quaternion.identity);
-                break; // Exit the loop once the correct spawn point is found
+                break; 
             }
         }
     }

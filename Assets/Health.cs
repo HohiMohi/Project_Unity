@@ -5,7 +5,7 @@ public class Health : MonoBehaviour
    [SerializeField] private float startingHealth;
    public float currentHealth { get; private set; }
 
-   private void Awake()
+   public void Awake()
     {
         currentHealth = startingHealth;
     }
@@ -21,5 +21,17 @@ public class Health : MonoBehaviour
         {
             //player dead
         }
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            TakeDamage(1);
+        }
+    }
+    public void AddHealth(float _value)
+    {
+        currentHealth = Mathf.Clamp(currentHealth - _value, 0 , startingHealth);
     }
 }
